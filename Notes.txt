@@ -1,0 +1,17 @@
+1. Start with making the backend: ( MAJOR STEPS INCLUDE ):
+
+- npm init -> makes the package.json file -> very imp to have all the dependencies and the FIRST STEP 
+- npm install express ( HTTP Server as we know ) ( Adds libs from internet to local system) -> Adds to the dependencies section
+- npm install jsonwebtoken ( if needed for authentication and if we are usin tokenizaton! )
+
+NOTE: When sharing code always delete the node-modules folder and ask person to download on local machine!
+
+- npm install mongoose -> to work with MongoDB and store data inside the mongo Database
+- npm install zod -> to validate what the user is sending us! 
+
+Working with Zod:
+- make a seperate types.js library! 
+- 
+
+
+
