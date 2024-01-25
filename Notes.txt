@@ -11,6 +11,7 @@ NOTE: When sharing code always delete the node-modules folder and ask person to 
 
 Working with Zod:
 - make a seperate types.js library! 
+- Write down the what each endpoint expects! -> inZod 
 - 
 
 

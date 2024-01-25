@@ -10,3 +10,15 @@ const updateToDo = zod.object({
     completed: zod.boolean()
 })
 
+// exports the zod schemas we have created!! 
+
+module.exports = {
+    createToDo,
+    updateToDo
+}
+
+
+
+
+
+
