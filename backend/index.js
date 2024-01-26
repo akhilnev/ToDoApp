@@ -1,6 +1,5 @@
 const express = require('express');
 const app = express();
-const mongoose = require('mongoose');
 const {createToDo,updateToDo} = require('./types'); // import the zod schemas we have created!!
 
 app.use(express.json()); // to get access to req.body!! -> for the rest of the routes/requests
@@ -18,7 +17,6 @@ app.post('/todo',function(req,res){
         return; 
     }
 
-    
 })
 
 app.get('/todos',function(req,res){
