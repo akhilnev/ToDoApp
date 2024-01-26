@@ -1,4 +1,8 @@
-1. Start with making the backend: ( MAJOR STEPS INCLUDE ):
+MAKING A FULL - STACK APP FROM SCRATCH QUICKLY AND THE PROCEDURE WRITTEN BELOW FOR REFERRENCE 
+
+1. Start with making the backend: 
+
+MAJOR STEPS INCLUDE :
 
 - npm init -> makes the package.json file -> very imp to have all the dependencies and the FIRST STEP 
 - npm install express ( HTTP Server as we know ) ( Adds libs from internet to local system) -> Adds to the dependencies section
@@ -9,10 +13,44 @@ NOTE: When sharing code always delete the node-modules folder and ask person to 
 - npm install mongoose -> to work with MongoDB and store data inside the mongo Database
 - npm install zod -> to validate what the user is sending us! 
 
-Working with Zod:
+Working with Zod: (in types.js):
 - make a seperate types.js library! 
 - Write down the what each endpoint expects! -> inZod 
-- 
+- Look at the way we export our constants, import them and use them for validation in index.js
 
+Working with Mongoose: ( In DB.js):
+- npm install mongoose ( to start connection with the MongoDB Database and Cluster)
+- note do this also in a seperate file (db.js) -> to keep the code organized 
+- export the model we build using const name to use in main index.js file!
+
+Integration of Backend ( Back to index.js):
+- Add major logic for routes in this file and use the model exported of Database accordingly
+- Use this project as syntax refference while coding say another project of our own! 
+- Still need to add the env file for security Hazard reasons 
+
+
+NOTE: npm install cors ( to make frontend accesible to local backend ELSE cors error)
+const cors = require("cors") -> importing into the project 
+then app.use(cors()) -> above all routes to be accesible 
+
+2. Now Designing the Front end in React :
+
+- npm create vite@latest
+- then they give instructions ( cd into frontend -> npm install )
+- then npm run dev ( to run the frontend part of it right now -> standard frontend! )
+- NOTE : npm build dev -> installs the non-React DOM version doing the exact same thing! 
+- vite helps us bundle our application ( NOT NEEDED WHILE DEPLOYING BUT OPTIONAL )
+- Remove all the crap from App() function to not render the autofilled BS 
+- Clean the index.css and App.css to go to ground zero 
+- Add a "Hi There" to check if frontend is working ! 
+
+Make a Components Folder for each Route which needs a seperate component:
+- Export the function returning the HTML block related to the specific component
+- Use it to rended in the App.jsx ( main frontend component)
+- For syntax refer the Components and the App.jsx folder!!
+
+
+FRONTEND -> DEPLOY USING VERCEL/NETLIFY ( FREE WAY )
+BACKEND  -> Render ( SIMPLE BACKEND FOR FREE! )
 
 

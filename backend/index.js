@@ -1,9 +1,11 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
 const {createToDo,updateToDo} = require('./types'); // import the zod schemas we have created!!
 const {todo} = require('./db'); // import the todo model we have created!! from the db.js file
 
 app.use(express.json()); // to get access to req.body!! -> for the rest of the routes/requests
+app.use(cors()); // to allow cross origin requests
 
 app.post('/todo',async function(req,res){
     // add a new todo - to the list and in the database 
@@ -48,7 +50,7 @@ app.put('/completed',async function(req,res){
         return;
     }
     // if valid, update the database
-    await todo.update(
+    await todo.updateOne(
     {
         _id : updatePayload.id
     },
@@ -61,5 +63,5 @@ app.put('/completed',async function(req,res){
 })
 
 app.listen(3000,function(){
-    console.log('server started');
+    console.log('server started at port 3000');
 })
