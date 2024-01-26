@@ -1,10 +1,8 @@
 export function Todos({todos}){
-    if (!todos) {
-        // You can add a loading state or a message indicating that data is being fetched.
-        return <p>Loading...</p>;
-    }
     // return list of to-dos we have rendered onto the screen like:
     return (
+        console.log("Below are the todos: "),
+        console.log(todos),
         <div>
             {todos.map(function(todo){ 
                 // map basically iterates over the array and returns each todo valie 
